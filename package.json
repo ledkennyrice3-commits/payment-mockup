@@ -6,6 +6,7 @@
   "main": "electron/main.js",
   "scripts": {
     "dev": "npm run dev --prefix crypto-mockup-app",
+    "build": "npm run build --prefix crypto-mockup-app",
     "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
     "electron-build": "electron-builder"
   },
