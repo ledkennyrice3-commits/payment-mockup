@@ -1,0 +1,29 @@
+{
+  "name": "md-mockup",
+  "productName": "MD Mockup",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "npm run dev --prefix crypto-mockup-app",
+    "electron-dev": "concurrently \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.mdmockup.app",
+    "productName": "MD Mockup",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "electron": "^44.2.0",
+    "electron-builder": "^26.15.3",
+    "wait-on": "^9.1.0"
+  }
+}
